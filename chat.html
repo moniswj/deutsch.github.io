@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Chat Niemiecki</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Strona główna</a> |
+<a href="lekcja1.html">Lekcja 1</a> |
+<a href="lekcja2.html">Lekcja 2</a> |
+<a href="quiz.html">Quiz</a> |
+<a href="chat.html">Chat</a>
+</nav>
+
+<h1>Ćwicz niemiecki z chatbotem</h1>
+
+<div id="chat" style="
+background:white;
+padding:20px;
+border-radius:10px;
+height:300px;
+overflow-y:auto;
+margin-bottom:15px;
+">
+<p><b>Bot:</b> Hallo! Wie heißt du?</p>
+</div>
+
+<input type="text" id="wiadomosc" placeholder="Napisz wiadomość..." style="width:70%;">
+<button onclick="wyslij()">Wyślij</button>
+
+<script>
+
+function wyslij(){
+
+let pole = document.getElementById("wiadomosc");
+let tekst = pole.value.trim();
+
+if(tekst==="") return;
+
+let chat = document.getElementById("chat");
+
+chat.innerHTML += "<p><b>Ty:</b> " + tekst + "</p>";
+
+let odp = "Ich verstehe nicht.";
+
+let t = tekst.toLowerCase();
+
+if(t.includes("hallo"))
+odp = "Hallo! Wie geht's?";
+
+else if(t.includes("gut"))
+odp = "Super! Woher kommst du?";
+
+else if(t.includes("polen"))
+odp = "Sehr schön! Ich lerne auch Deutsch.";
+
+else if(t.includes("tschüss"))
+odp = "Tschüss! Bis bald.";
+
+else if(t.includes("wie heißt du"))
+odp = "Ich bin dein Deutsch-Bot.";
+
+chat.innerHTML += "<p><b>Bot:</b> " + odp + "</p>";
+
+chat.scrollTop = chat.scrollHeight;
+
+pole.value = "";
+
+}
+
+</script>
+
+</body>
+</html>
