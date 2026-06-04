@@ -24,3 +24,16 @@ ul {
     padding: 20px 40px;
     border-radius: 10px;
 }
+nav {
+    text-align: center;
+    padding: 15px;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
