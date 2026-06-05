@@ -46,7 +46,8 @@ let chat = document.getElementById("chat");
 chat.innerHTML += "<p><b>Ty:</b> " + tekst + "</p>";
 
 let odp = "Ich verstehe nicht.";
-
+else if(t.includes("ich heiße"))
+odp = "Freut mich! Schön, dich kennenzulernen.";
 let t = tekst.toLowerCase();
 
 if(t.includes("hallo"))
