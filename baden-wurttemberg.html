@@ -2,51 +2,110 @@
 <html lang="pl">
 <head>
 <meta charset="UTF-8">
-<title>Poziomy</title>
+<title>Baden-Württemberg</title>
 
 <style>
 
 body{
     margin:0;
-    background:#050505;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     height:100vh;
 
-    font-family:Arial;
+    background:url("karlsruhe.png");
+    background-size:cover;
+    background-position:center;
+
+    font-family:Arial,sans-serif;
+
+    overflow:hidden;
 }
 
-.levels{
-    display:flex;
-    gap:20px;
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.15);
 }
 
-.levels a{
+.door{
+    position:absolute;
 
-    width:90px;
-    height:90px;
+    width:55px;
+    height:70px;
 
-    background:#222;
+    background:linear-gradient(
+        to right,
+        #5a3515,
+        #8b5a2b,
+        #5a3515
+    );
+
+    border:2px solid #2f1808;
+    border-radius:4px;
 
     color:white;
-
     text-decoration:none;
 
     display:flex;
-
     justify-content:center;
     align-items:center;
 
-    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
 
-    font-size:30px;
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+
+    transition:.3s;
 }
 
-.levels a:hover{
-    background:#444;
+.door:hover{
+    transform:scale(1.08);
+}
+
+.door::after{
+    content:"";
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:gold;
+
+    position:absolute;
+    right:6px;
+    top:32px;
+}
+
+.a1{
+    left:50%;
+    bottom:48px;
+    transform:translateX(-50%);
+}
+
+.a2{
+    left:50%;
+    bottom:95px;
+    transform:translateX(-50%);
+}
+
+.b1{
+    left:50%;
+    bottom:145px;
+    transform:translateX(-50%);
+}
+
+.b2{
+    left:50%;
+    bottom:195px;
+    transform:translateX(-50%);
+}
+
+.c1{
+    left:50%;
+    bottom:245px;
+    transform:translateX(-50%);
+}
+
+.c2{
+    left:50%;
+    bottom:295px;
+    transform:translateX(-50%);
 }
 
 </style>
@@ -54,16 +113,19 @@ body{
 
 <body>
 
-<div class="levels">
+<div class="overlay"></div>
 
-<a href="a1.html">A1</a>
-<a href="a2.html">A2</a>
-<a href="b1.html">B1</a>
-<a href="b2.html">B2</a>
-<a href="c1.html">C1</a>
-<a href="c2.html">C2</a>
+<a href="a1.html" class="door a1">A1</a>
 
-</div>
+<a href="a2.html" class="door a2">A2</a>
+
+<a href="b1.html" class="door b1">B1</a>
+
+<a href="b2.html" class="door b2">B2</a>
+
+<a href="c1.html" class="door c1">C1</a>
+
+<a href="c2.html" class="door c2">C2</a>
 
 </body>
 </html>
