@@ -109,3 +109,20 @@ h2{
     margin:20px auto;
     text-align:center;
 }
+.earth{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    z-index:-1;
+}
+
+.germany{
+    position:absolute;
+    top:45%;
+    left:55%;
+    width:180px;
+    cursor:pointer;
+}
