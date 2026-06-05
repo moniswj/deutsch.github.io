@@ -174,3 +174,35 @@ body{
 .levels a:hover{
     background:#444;
 }
+.learned-btn{
+
+    position:fixed;
+
+    right:30px;
+    bottom:30px;
+
+    padding:15px 25px;
+
+    background:#d4a017;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    box-shadow:0 0 15px rgba(0,0,0,.4);
+
+}
+
+.learned-btn:hover{
+
+    transform:scale(1.05);
+
+}
