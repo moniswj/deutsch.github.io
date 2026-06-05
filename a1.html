@@ -21,6 +21,33 @@
 <li><a href="chat.html">Chat A1</a></li>
 
 </ul>
+<button class="learned-btn" onclick="saveLearning()">
+Heute gelernt
+</button>
 
+<script>
+
+function saveLearning(){
+
+    let today = new Date().toISOString().split('T')[0];
+
+    let history =
+    JSON.parse(localStorage.getItem("learningHistory")) || {};
+
+    if(!history[today]){
+        history[today] = [];
+    }
+
+    history[today].push("Lekcja 1");
+
+    localStorage.setItem(
+        "learningHistory",
+        JSON.stringify(history)
+    );
+
+    alert("Lekcja została zapisana.");
+}
+
+</script>
 </body>
 </html>
