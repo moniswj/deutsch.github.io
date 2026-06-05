@@ -77,3 +77,35 @@ h2{
     object-fit:cover;
     z-index:-1;
 }
+.earth{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    object-fit:cover;
+    z-index:-1;
+}
+
+.germany{
+    position:absolute;
+    top:45%;
+    left:55%;
+    width:180px;
+    cursor:pointer;
+}
+
+.title{
+    text-align:center;
+    color:white;
+    margin-top:80px;
+}
+
+.menu{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    width:70%;
+    margin:20px auto;
+    text-align:center;
+}
