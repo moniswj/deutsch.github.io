@@ -46,10 +46,29 @@ let chat = document.getElementById("chat");
 chat.innerHTML += "<p><b>Ty:</b> " + tekst + "</p>";
 
 let odp = "Ich verstehe nicht.";
-else if(t.includes("ich heiße"))
-odp = "Freut mich! Schön, dich kennenzulernen.";
+
+let t = tekst.toLowerCase();
+let odp = "Ich verstehe nicht.";
+
 let t = tekst.toLowerCase();
 
+if(t.includes("ich heiße"))
+odp = "Freut mich! Schön, dich kennenzulernen.";
+
+else if(t.includes("hallo"))
+odp = "Hallo! Wie geht's?";
+
+else if(t.includes("gut"))
+odp = "Super! Woher kommst du?";
+
+else if(t.includes("polen"))
+odp = "Sehr schön! Ich lerne auch Deutsch.";
+
+else if(t.includes("tschüss"))
+odp = "Tschüss! Bis bald.";
+
+else if(t.includes("wie heißt du"))
+odp = "Ich bin dein Deutsch-Bot.";
 if(t.includes("hallo"))
 odp = "Hallo! Wie geht's?";
 
