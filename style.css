@@ -206,3 +206,31 @@ body{
     transform:scale(1.05);
 
 }
+.history-btn{
+
+    position:absolute;
+
+    top:30px;
+    right:30px;
+
+    background:#d4a017;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    font-weight:bold;
+
+    box-shadow:0 0 10px rgba(0,0,0,.5);
+
+}
+
+.history-btn:hover{
+
+    transform:scale(1.05);
+
+}
