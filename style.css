@@ -272,3 +272,17 @@ transform:scaleY(0.05);
 animation:blink 5s infinite;
 
 }
+@keyframes talk{
+
+0%{transform:scale(1);}
+50%{transform:scale(1.03);}
+100%{transform:scale(1);}
+
+}
+
+.speaking{
+
+animation:
+talk .25s infinite;
+
+}
