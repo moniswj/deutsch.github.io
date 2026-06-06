@@ -358,3 +358,18 @@ setTimeout(nextDialog,4000);
 
 </body>
 </html>
+function pauseMovie(){
+
+paused=!paused;
+
+if(paused){
+
+speechSynthesis.pause();
+
+}else{
+
+speechSynthesis.resume();
+
+}
+
+}
