@@ -344,7 +344,11 @@ document.getElementById("max").classList.add("speaking");
 speak(text,person);
 
 let percent=((index+1)/dialogs.length)*100;
+let current=index+1;
 
+document.getElementById("timeLabel").innerHTML=
+
+current + " / " + dialogs.length;
 document.getElementById("bar").style.width=
 percent+"%";
 
