@@ -251,3 +251,24 @@ button{
 margin:5px;
 
 }
+@keyframes blink{
+
+0%,90%,100%{
+
+transform:scaleY(1);
+
+}
+
+95%{
+
+transform:scaleY(0.05);
+
+}
+
+}
+
+.character{
+
+animation:blink 5s infinite;
+
+}
