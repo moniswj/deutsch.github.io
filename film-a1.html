@@ -1,1 +1,472 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Was kann man nach einem Deutschkurs A1?</title>
+<style>
+  :root{
+    --bg:#f4f7fb;
+    --ink:#1f2937;
+    --accent:#2563eb;
+    --muted:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+  }
+  .wrap{
+    max-width:1200px;
+    margin:0 auto;
+    padding:20px;
+  }
+  .top{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    align-items:center;
+    margin-bottom:14px;
+  }
+  .top h1{
+    font-size:22px;
+    margin:0;
+  }
+  .top .note{
+    color:var(--muted);
+    font-size:14px;
+  }
+  .stage{
+    position:relative;
+    aspect-ratio:16/9;
+    background:linear-gradient(#cfeeff 0%,#f8fcff 55%,#dff4d8 100%);
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 12px 32px rgba(0,0,0,.12);
+  }
+  .ground{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height:30%;
+    background:linear-gradient(#86cf66,#67b84c);
+  }
+  .sun{
+    position:absolute;
+    right:60px;
+    top:40px;
+    width:88px;
+    height:88px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 35%, #fff8b3, #ffd24d 60%, #ffb400 100%);
+    opacity:.95;
+  }
+  .cloud{
+    position:absolute;
+    top:60px;
+    left:8%;
+    width:180px;
+    height:56px;
+    background:rgba(255,255,255,.74);
+    border-radius:999px;
+  }
+  .cloud:before,.cloud:after{
+    content:"";
+    position:absolute;
+    background:inherit;
+    border-radius:50%;
+  }
+  .cloud:before{
+    width:68px;
+    height:68px;
+    left:26px;
+    top:-30px;
+  }
+  .cloud:after{
+    width:84px;
+    height:84px;
+    left:74px;
+    top:-38px;
+  }
+  .plaza{
+    position:absolute;
+    left:11%;
+    right:11%;
+    bottom:7%;
+    height:18%;
+    border-radius:50% 50% 0 0;
+    background:rgba(255,255,255,.15);
+  }
+  .cafe{
+    position:absolute;
+    right:8%;
+    bottom:19%;
+    width:18%;
+    height:23%;
+    background:#fff1d7;
+    border:4px solid #a86b39;
+    border-bottom-width:8px;
+    border-radius:10px;
+  }
+  .cafe:before{
+    content:"";
+    position:absolute;
+    left:12%;
+    top:16%;
+    right:12%;
+    height:18%;
+    background:#79c7ff;
+    border-radius:6px;
+  }
+  .cafe:after{
+    content:"CAFE";
+    position:absolute;
+    left:50%;
+    top:-18px;
+    transform:translateX(-50%);
+    font-weight:700;
+    color:#8b4b1f;
+    letter-spacing:2px;
+  }
+  .bench{
+    position:absolute;
+    left:12%;
+    bottom:23%;
+    width:170px;
+    height:40px;
+    background:#8b5e3c;
+    border-radius:8px;
+  }
+  .bench:before,.bench:after{
+    content:"";
+    position:absolute;
+    bottom:-34px;
+    width:14px;
+    height:34px;
+    background:#6d4628;
+  }
+  .bench:before{left:18px}
+  .bench:after{right:18px}
 
+  .person{
+    position:absolute;
+    bottom:8%;
+    width:300px;
+    height:560px;
+    transform-origin:center bottom;
+    filter:drop-shadow(0 10px 14px rgba(0,0,0,.18));
+  }
+
+  .anna{left:12%}
+  .max{right:12%}
+
+  .portrait{
+    position:absolute;
+    left:50%;
+    top:0;
+    transform:translateX(-50%);
+    width:260px;
+    height:260px;
+    border-radius:28px;
+    object-fit:cover;
+    background:#fff;
+    border:6px solid rgba(255,255,255,.7);
+    box-shadow:0 8px 18px rgba(0,0,0,.10);
+  }
+
+  .body{
+    position:absolute;
+    left:50%;
+    top:210px;
+    transform:translateX(-50%);
+    width:210px;
+    height:240px;
+    border-radius:42px;
+    background:linear-gradient(#2563eb,#1d4ed8);
+    opacity:.18;
+  }
+
+  .anna .body{
+    background:linear-gradient(#35a85a,#1f8a48);
+    opacity:.18;
+  }
+
+  .arm{
+    position:absolute;
+    top:265px;
+    width:96px;
+    height:170px;
+    border-radius:48px;
+    background:rgba(244,199,147,.65);
+    transform-origin:top center;
+  }
+
+  .leftarm{left:34px;transform:rotate(18deg)}
+  .rightarm{right:34px;transform:rotate(-18deg)}
+
+  .hand{
+    position:absolute;
+    bottom:-8px;
+    left:50%;
+    transform:translateX(-50%);
+    width:72px;
+    height:78px;
+    border-radius:22px;
+    background:rgba(244,199,147,.75);
+  }
+
+  .max .rightarm{animation:wave 1.7s ease-in-out infinite}
+  .max .leftarm{animation:hold 2.1s ease-in-out infinite}
+  .anna .leftarm,.anna .rightarm{animation:gentle 2.2s ease-in-out infinite}
+
+  .subtitle{
+    position:absolute;
+    left:50%;
+    bottom:92px;
+    transform:translateX(-50%);
+    background:rgba(255,255,255,.88);
+    color:#111827;
+    padding:10px 16px;
+    border-radius:999px;
+    font-size:16px;
+    opacity:0;
+    transition:.25s;
+    max-width:84%;
+    text-align:center;
+  }
+  .subtitle.show{opacity:1}
+
+  .caption{
+    position:absolute;
+    left:50%;
+    bottom:28px;
+    transform:translateX(-50%);
+    background:rgba(17,24,39,.7);
+    color:#fff;
+    padding:14px 18px;
+    border-radius:14px;
+    font-size:18px;
+    max-width:88%;
+    text-align:center;
+    backdrop-filter:blur(6px);
+  }
+
+  .talk{
+    animation:float 1s ease-in-out infinite;
+  }
+  .talk .portrait{
+    animation:head 0.9s ease-in-out infinite;
+  }
+  .talk .body{
+    animation:body 0.95s ease-in-out infinite;
+  }
+  .talk .arm{
+    animation:arm 1s ease-in-out infinite;
+  }
+
+  @keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
+  }
+  @keyframes head{
+    0%,100%{transform:translateX(-50%) translateY(0)}
+    50%{transform:translateX(-50%) translateY(-4px)}
+  }
+  @keyframes body{
+    0%,100%{transform:translateX(-50%) rotate(0deg)}
+    50%{transform:translateX(-50%) rotate(-1deg)}
+  }
+  @keyframes wave{
+    0%,100%{transform:rotate(-18deg)}
+    50%{transform:rotate(14deg)}
+  }
+  @keyframes hold{
+    0%,100%{transform:rotate(16deg)}
+    50%{transform:rotate(8deg)}
+  }
+  @keyframes gentle{
+    0%,100%{transform:rotate(18deg)}
+    50%{transform:rotate(10deg)}
+  }
+  @keyframes arm{
+    0%,100%{transform:rotate(-18deg)}
+    50%{transform:rotate(-6deg)}
+  }
+
+  .controls{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:16px;
+    align-items:center;
+  }
+  button{
+    border:0;
+    background:var(--accent);
+    color:#fff;
+    padding:12px 18px;
+    border-radius:12px;
+    font-size:16px;
+    cursor:pointer;
+  }
+  button.secondary{
+    background:#e5e7eb;
+    color:#111827;
+  }
+  .small{
+    font-size:14px;
+    color:var(--muted);
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <h1>Was kann man nach einem Deutschkurs A1?</h1>
+    <div class="note">Anna i Max z Twoich obrazków, naprzemienny dialog, ruch i głos przez przeglądarkę.</div>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="sun"></div>
+    <div class="cloud"></div>
+    <div class="ground"></div>
+    <div class="plaza"></div>
+    <div class="bench"></div>
+    <div class="cafe"></div>
+
+    <div class="person max" id="max">
+      <img class="portrait" src="max.png" alt="Max">
+      <div class="arm leftarm"><div class="hand"></div></div>
+      <div class="arm rightarm"><div class="hand"></div></div>
+      <div class="body"></div>
+    </div>
+
+    <div class="person anna" id="anna">
+      <img class="portrait" src="anna.png" alt="Anna">
+      <div class="arm leftarm"><div class="hand"></div></div>
+      <div class="arm rightarm"><div class="hand"></div></div>
+      <div class="body"></div>
+    </div>
+
+    <div class="subtitle" id="subtitle"></div>
+    <div class="caption">Was kann man nach einem Deutschkurs A1?</div>
+  </div>
+
+  <div class="controls">
+    <button id="playBtn">Start dialogu</button>
+    <button class="secondary" id="stopBtn">Stop</button>
+    <span class="small">Najlepiej działa w Chrome lub Edge z niemieckim głosem systemowym.</span>
+  </div>
+</div>
+
+<script>
+const lines = [
+  {speaker:'Anna', text:'Hallo!'},
+  {speaker:'Max', text:'Hallo! Wie geht es dir?'},
+  {speaker:'Anna', text:'Gut, danke. Und dir?'},
+  {speaker:'Max', text:'Auch gut, danke.'},
+  {speaker:'Anna', text:'Wie heißt du?'},
+  {speaker:'Max', text:'Ich heiße Max. Und du?'},
+  {speaker:'Anna', text:'Ich heiße Anna.'},
+  {speaker:'Max', text:'Woher kommst du?'},
+  {speaker:'Anna', text:'Ich komme aus Polen. Und du?'},
+  {speaker:'Max', text:'Ich komme aus Deutschland.'},
+  {speaker:'Anna', text:'Wo wohnst du?'},
+  {speaker:'Max', text:'Ich wohne in Berlin. Und du?'},
+  {speaker:'Anna', text:'Ich wohne in Frankfurt.'},
+  {speaker:'Max', text:'Wie alt bist du?'},
+  {speaker:'Anna', text:'Ich bin 29 Jahre alt. Und du?'},
+  {speaker:'Max', text:'Ich bin 31.'},
+  {speaker:'Anna', text:'Was machst du beruflich?'},
+  {speaker:'Max', text:'Ich arbeite als Techniker. Und du?'},
+  {speaker:'Anna', text:'Ich arbeite im Büro.'},
+  {speaker:'Max', text:'Sprichst du Deutsch jeden Tag?'},
+  {speaker:'Anna', text:'Ja, ein bisschen. Ich lerne Deutsch und spreche mit meinen Kollegen.'},
+  {speaker:'Max', text:'Sehr gut!'},
+  {speaker:'Anna', text:'Hast du Familie?'},
+  {speaker:'Max', text:'Ja. Ich habe eine Frau und zwei Kinder.'},
+  {speaker:'Anna', text:'Schön! Ich habe einen Bruder und eine Schwester.'},
+  {speaker:'Max', text:'Was machst du gern in deiner Freizeit?'},
+  {speaker:'Anna', text:'Ich lese gern, höre Musik und gehe spazieren. Und du?'},
+  {speaker:'Max', text:'Ich spiele Fußball und fahre Fahrrad.'},
+  {speaker:'Anna', text:'Hast du Hunger?'},
+  {speaker:'Max', text:'Ja, ein bisschen.'},
+  {speaker:'Anna', text:'Möchtest du einen Kaffee?'},
+  {speaker:'Max', text:'Ja, gern. Danke!'},
+  {speaker:'Anna', text:'Bitte.'},
+  {speaker:'Max', text:'Wie viel kostet ein Kaffee?'},
+  {speaker:'Anna', text:'Drei Euro.'},
+  {speaker:'Max', text:'Das ist gut.'},
+  {speaker:'Max', text:'Entschuldigung, wo ist der Bahnhof?'},
+  {speaker:'Anna', text:'Der Bahnhof ist dort, links neben dem Supermarkt.'},
+  {speaker:'Max', text:'Danke für die Hilfe!'},
+  {speaker:'Anna', text:'Gern geschehen.'},
+  {speaker:'Max', text:'Hallo?'},
+  {speaker:'Anna', text:'Hallo Max! Kommst du heute zum Deutschkurs?'},
+  {speaker:'Max', text:'Ja, natürlich. Um wie viel Uhr?'},
+  {speaker:'Anna', text:'Um 18 Uhr.'},
+  {speaker:'Max', text:'Perfekt. Bis später!'},
+  {speaker:'Anna', text:'Bis später!'},
+  {speaker:'Anna', text:'Nach einem Deutschkurs A1 kann ich mich vorstellen.'},
+  {speaker:'Max', text:'Ich kann Fragen stellen und beantworten.'},
+  {speaker:'Anna', text:'Ich kann über meine Familie, meine Arbeit und mein Hobby sprechen.'},
+  {speaker:'Max', text:'Ich kann einfache Gespräche im Alltag führen.'},
+  {speaker:'Anna', text:'Zum Beispiel im Café, bei der Arbeit oder auf der Straße.'},
+  {speaker:'Max', text:'Deutsch lernen macht Spaß!'},
+  {speaker:'Anna', text:'Viel Erfolg beim Deutschlernen!'},
+  {speaker:'Both', text:'Tschüss!'}
+];
+
+const subtitle = document.getElementById('subtitle');
+const anna = document.getElementById('anna');
+const max = document.getElementById('max');
+let playing = false;
+
+function setActive(name){
+  anna.classList.toggle('talk', name==='Anna' || name==='Both');
+  max.classList.toggle('talk', name==='Max' || name==='Both');
+}
+
+function speakLine(i){
+  if(!playing || i >= lines.length) return stop();
+  const line = lines[i];
+  subtitle.textContent = `${line.speaker}: ${line.text}`;
+  subtitle.classList.add('show');
+  setActive(line.speaker);
+
+  const utter = new SpeechSynthesisUtterance(line.text);
+  utter.lang = 'de-DE';
+  utter.rate = 0.95;
+  utter.pitch = line.speaker === 'Anna' ? 1.12 : 0.96;
+  utter.volume = 1;
+
+  const voices = speechSynthesis.getVoices();
+  const de = voices.find(v => v.lang && v.lang.toLowerCase().startsWith('de'));
+  if(de) utter.voice = de;
+
+  utter.onend = () => setTimeout(() => speakLine(i + 1), 220);
+  utter.onerror = () => setTimeout(() => speakLine(i + 1), 220);
+  speechSynthesis.speak(utter);
+}
+
+function play(){
+  stop();
+  playing = true;
+  speakLine(0);
+}
+
+function stop(){
+  playing = false;
+  setActive('');
+  subtitle.classList.remove('show');
+  speechSynthesis.cancel();
+}
+
+document.getElementById('playBtn').onclick = play;
+document.getElementById('stopBtn').onclick = stop;
+</script>
+</body>
+</html>
