@@ -254,6 +254,10 @@ const dialogs=[
 
 let index=0;
 
+let paused=false;
+
+let timer=null;
+
 function speak(text){
 
 const speech=new SpeechSynthesisUtterance(text);
