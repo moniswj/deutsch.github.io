@@ -234,3 +234,20 @@ body{
 
     transform:scale(1.05);
 }
+#timeLabel{
+
+margin-top:10px;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#555;
+
+}
+
+button{
+
+margin:5px;
+
+}
