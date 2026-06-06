@@ -258,8 +258,46 @@ let paused=false;
 
 let timer=null;
 
-function speak(text){
+function speak(text,person){
 
+window.speechSynthesis.cancel();
+
+const speech=new SpeechSynthesisUtterance(text);
+
+speech.lang="de-DE";
+
+speech.rate=0.9;
+
+speech.pitch=1;
+
+const voices =
+speechSynthesis.getVoices();
+
+if(person==="Anna"){
+
+let female =
+voices.find(v =>
+v.lang.includes("de") &&
+v.name.toLowerCase().includes("female"));
+
+if(female) speech.voice=female;
+
+}
+
+if(person==="Max"){
+
+let male =
+voices.find(v =>
+v.lang.includes("de") &&
+v.name.toLowerCase().includes("male"));
+
+if(male) speech.voice=male;
+
+}
+
+speechSynthesis.speak(speech);
+
+}
 const speech=new SpeechSynthesisUtterance(text);
 
 speech.lang="de-DE";
