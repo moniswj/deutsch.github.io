@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Was kann man nach einem Deutschkurs A1?</title>
+
+<style>
+
+body{
+    margin:0;
+    background:#eef3f7;
+    font-family:Arial,sans-serif;
+    text-align:center;
+}
+
+h1{
+    margin-top:20px;
+    color:#1b365d;
+}
+
+.player{
+
+    width:900px;
+    max-width:95%;
+
+    margin:20px auto;
+
+    background:white;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+}
+
+.scene{
+
+    height:520px;
+
+    background:url("karlsruhe.png");
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+}
+
+.character{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:280px;
+
+    transition:.4s;
+}
+
+.left{
+    left:30px;
+}
+
+.right{
+    right:30px;
+}
+
+.speaking{
+    transform:scale(1.05);
+    filter:drop-shadow(0 0 20px rgba(255,255,255,.8));
+}
+
+.bubble{
+
+    position:absolute;
+
+    top:50px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    width:420px;
+
+    font-size:28px;
+
+    box-shadow:0 0 15px rgba(0,0,0,.2);
+}
+
+.controls{
+
+    padding:20px;
+}
+
+button{
+
+    background:#58cc02;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 40px;
+
+    border-radius:30px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.progress{
+
+    width:80%;
+
+    height:14px;
+
+    background:#ddd;
+
+    margin:20px auto;
+
+    border-radius:20px;
+
+    overflow:hidden;
+}
+
+.bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:#58cc02;
+
+}
+
+</style>
+</head>
+<body>
+
+<h1>Was kann man nach einem Deutschkurs A1?</h1>
+
+<div class="player">
+
+<div class="scene">
+
+<img src="anna.png" id="anna" class="character left">
+
+<img src="max.png" id="max" class="character right">
+
+<div class="bubble" id="bubble">
+
+Klicke „Abspielen”
+
+</div>
+
+</div>
+
+<div class="controls">
+
+<button onclick="startMovie()">
+
+▶ Abspielen
+
+</button>
+
+<div class="progress">
+
+<div class="bar" id="bar"></div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+const dialogs=[
+
+["Anna","Hallo!"],
+["Max","Hallo! Wie geht's?"],
+["Anna","Gut, danke. Und dir?"],
+["Max","Auch gut, danke."],
+["Anna","Wie heißt du?"],
+["Max","Ich heiße Max. Und du?"],
+["Anna","Ich heiße Anna."],
+["Max","Woher kommst du?"],
+["Anna","Ich komme aus Polen."],
+["Max","Ich komme aus Deutschland."],
+["Anna","Wo wohnst du?"],
+["Max","Ich wohne in Berlin."],
+["Anna","Ich wohne in Frankfurt."],
+["Max","Wie alt bist du?"],
+["Anna","Ich bin 29 Jahre alt."],
+["Max","Ich bin 31."],
+["Anna","Was machst du beruflich?"],
+["Max","Ich arbeite als Techniker."],
+["Anna","Ich arbeite im Büro."],
+["Max","Sehr gut!"],
+["Anna","Hast du Familie?"],
+["Max","Ja. Ich habe eine Frau und zwei Kinder."],
+["Anna","Schön! Ich habe einen Bruder und eine Schwester."],
+["Max","Was machst du gern in deiner Freizeit?"],
+["Anna","Ich lese gern und höre Musik."],
+["Max","Ich spiele Fußball und fahre Fahrrad."],
+["Anna","Hast du Hunger?"],
+["Max","Ja, ein bisschen."],
+["Anna","Möchtest du einen Kaffee?"],
+["Max","Ja, gern. Danke!"],
+["Anna","Bitte."],
+["Max","Wie viel kostet ein Kaffee?"],
+["Anna","Drei Euro."],
+["Max","Das ist gut."],
+["Max","Entschuldigung, wo ist der Bahnhof?"],
+["Anna","Der Bahnhof ist dort."],
+["Max","Danke für die Hilfe!"],
+["Anna","Gern geschehen."],
+["Max","Kommst du heute zum Deutschkurs?"],
+["Anna","Um 18 Uhr."],
+["Max","Perfekt. Bis später!"],
+["Anna","Bis später!"],
+["Anna","Nach einem Deutschkurs A1 kann ich mich vorstellen."],
+["Max","Ich kann Fragen stellen und beantworten."],
+["Anna","Ich kann über Familie und Arbeit sprechen."],
+["Max","Ich kann einfache Gespräche führen."],
+["Anna","Deutsch lernen macht Spaß!"],
+["Max","Viel Erfolg beim Deutschlernen!"],
+["Beide","Tschüss!"]
+
+];
+
+let index=0;
+
+function speak(text){
+
+const speech=new SpeechSynthesisUtterance(text);
+
+speech.lang="de-DE";
+
+speech.rate=0.9;
+
+speech.pitch=1;
+
+window.speechSynthesis.speak(speech);
+
+}
+
+function startMovie(){
+
+index=0;
+
+nextDialog();
+
+}
+
+function nextDialog(){
+
+if(index>=dialogs.length){
+
+document.getElementById("bubble").innerHTML="Film beendet";
+return;
+}
+
+let person=dialogs[index][0];
+let text=dialogs[index][1];
+
+document.getElementById("bubble").innerHTML=
+"<b>"+person+"</b><br>"+text;
+
+document.getElementById("anna").classList.remove("speaking");
+document.getElementById("max").classList.remove("speaking");
+
+if(person==="Anna")
+document.getElementById("anna").classList.add("speaking");
+
+if(person==="Max")
+document.getElementById("max").classList.add("speaking");
+
+speak(text);
+
+let percent=((index+1)/dialogs.length)*100;
+
+document.getElementById("bar").style.width=
+percent+"%";
+
+index++;
+
+setTimeout(nextDialog,4000);
+
+}
+
+</script>
+
+</body>
+</html>
