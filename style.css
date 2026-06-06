@@ -286,3 +286,24 @@ animation:
 talk .25s infinite;
 
 }
+.film-btn{
+
+display:inline-block;
+
+padding:15px 30px;
+
+background:#58cc02;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:12px;
+
+font-size:22px;
+
+font-weight:bold;
+
+margin:20px;
+
+}
