@@ -442,3 +442,36 @@ body{
     transform:scale(1.03);
 
 }
+.page{
+
+    max-width:1000px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+
+}
+
+.page h1{
+
+    margin-bottom:20px;
+
+}
+
+.page a{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    color:#0055cc;
+
+}
