@@ -386,3 +386,59 @@ body{
         transform: scale(1.15);
     }
 }
+.germany-page{
+    margin:0;
+    background:#111;
+}
+
+.germany-map{
+    width:100%;
+    display:block;
+}
+
+.menu-landow{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+}
+
+.menu-landow a{
+
+    background:rgba(0,0,0,0.75);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.menu-landow a:hover{
+
+    background:rgba(255,215,0,0.85);
+
+    color:black;
+
+    transform:scale(1.03);
+
+}
