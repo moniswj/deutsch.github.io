@@ -307,3 +307,46 @@ font-weight:bold;
 margin:20px;
 
 }
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    background:url("a1-stadt.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    font-family:Arial,sans-serif;
+
+}
+
+.lesson-overlay{
+
+    min-height:100vh;
+
+    background:rgba(0,0,0,.45);
+
+    color:white;
+
+    padding:40px;
+
+}
+
+.lesson-overlay h1{
+
+    font-size:48px;
+
+    text-shadow:0 0 15px black;
+
+}
+
+.lesson-overlay p{
+
+    font-size:24px;
+
+}
