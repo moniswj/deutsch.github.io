@@ -1,1 +1,155 @@
+/* ===== USTAWIENIA OGÓLNE ===== */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+}
+
+/* ===== STRONA GŁÓWNA ===== */
+
+#mapa{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+#earth{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+#niemcy{
+    position:absolute;
+
+    top:28%;
+    left:43.5%;
+
+    width:120px;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    filter:
+    drop-shadow(0 0 10px gold)
+    drop-shadow(0 0 25px gold);
+}
+
+#niemcy:hover{
+    transform:scale(1.12);
+}
+
+#niemcy img{
+    width:100%;
+    display:block;
+}
+
+/* ===== MAPA NIEMIEC ===== */
+
+.germany-page{
+    margin:0;
+    background:#111;
+}
+
+.germany-map{
+    width:100vw;
+    height:100vh;
+    object-fit:contain;
+    display:block;
+}
+
+.menu-landow{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:900px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:15px;
+}
+
+.menu-landow a{
+
+    background:rgba(0,0,0,.75);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    font-size:20px;
+
+    transition:.3s;
+}
+
+.menu-landow a:hover{
+
+    background:rgba(255,215,0,.85);
+
+    color:black;
+
+    transform:scale(1.03);
+}
+
+/* ===== PODSTRONY ===== */
+
+.page{
+
+    max-width:1000px;
+
+    margin:50px auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
+
+.page h1{
+
+    margin-bottom:20px;
+
+    color:#222;
+}
+
+.page p{
+
+    color:#444;
+
+    line-height:1.6;
+}
+
+.page a{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    text-decoration:none;
+
+    color:#0055cc;
+}
