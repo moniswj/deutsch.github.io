@@ -64,6 +64,7 @@ body{
     height:100vh;
     object-fit:contain;
     display:block;
+    margin:auto;
 }
 
 .menu-landow{
