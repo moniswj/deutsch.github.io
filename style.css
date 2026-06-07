@@ -154,3 +154,118 @@ body{
 
     color:#0055cc;
 }
+.land{
+
+    position:absolute;
+
+    background:rgba(0,0,0,0.75);
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.land:hover{
+
+    background:rgba(255,215,0,0.9);
+
+    color:black;
+
+    transform:scale(1.05);
+}
+
+/* Schleswig-Holstein */
+
+.schleswig{
+
+    top:11%;
+    left:48%;
+}
+
+/* Hamburg */
+
+.hamburg{
+
+    top:22%;
+    left:50%;
+}
+
+/* Niedersachsen */
+
+.niedersachsen{
+
+    top:35%;
+    left:43%;
+}
+
+/* NRW */
+
+.nrw{
+
+    top:50%;
+    left:34%;
+}
+
+/* Hessen */
+
+.hessen{
+
+    top:57%;
+    left:47%;
+}
+
+/* Baden-Württemberg */
+
+.baden{
+
+    top:80%;
+    left:42%;
+}
+
+/* Bayern */
+
+.bayern{
+
+    top:82%;
+    left:66%;
+}
+
+/* Berlin */
+
+.berlin{
+
+    top:41%;
+    left:72%;
+}
+
+/* Brandenburg */
+
+.brandenburg{
+
+    top:53%;
+    left:73%;
+}
+
+/* Sachsen */
+
+.sachsen{
+
+    top:62%;
+    left:67%;
+}
+
+/* Thüringen */
+
+.thueringen{
+
+    top:58%;
+    left:58%;
+}
