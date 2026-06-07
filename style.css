@@ -350,3 +350,16 @@ body{
     font-size:24px;
 
 }
+.lesson-banner{
+    width:100%;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.lesson-banner img{
+    width:100%;
+    max-height:500px;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+}
