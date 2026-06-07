@@ -269,3 +269,18 @@ body{
     top:58%;
     left:58%;
 }
+.germany-page{
+    margin:0;
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    background:#111;
+}
+
+.germany-map{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
