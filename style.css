@@ -321,3 +321,15 @@ body{
 
     color:#222;
 }
+.wortschatz-bild{
+    width:100%;
+    max-width:1000px;
+
+    display:block;
+
+    margin:30px auto;
+
+    border-radius:15px;
+
+    box-shadow:0 0 20px rgba(0,0,0,.2);
+}
