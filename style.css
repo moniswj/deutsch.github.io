@@ -166,13 +166,13 @@ body{
 
     text-decoration:none;
 
-    padding:12px 22px;
+    padding:8px 16px;
 
     border-radius:14px;
 
     font-weight:bold;
 
-    font-size:20px;
+    font-size:16px;
 
     border:1px solid rgba(255,255,255,0.2);
 
@@ -251,15 +251,15 @@ body{
 .bayern{
 
     top:82%;
-    left:66%;
+    left:52%;
 }
 
 /* Berlin */
 
 .berlin{
 
-    top:41%;
-    left:72%;
+    top:40%;
+    left:58%;
 }
 
 /* Brandenburg */
@@ -267,15 +267,15 @@ body{
 .brandenburg{
 
     top:53%;
-    left:73%;
+    left:60%;
 }
 
 /* Sachsen */
 
 .sachsen{
 
-    top:62%;
-    left:67%;
+    top:63%;
+    left:56%;
 }
 
 /* Thüringen */
@@ -323,3 +323,6 @@ body{
         #ffce00 66%
     );
 }
+text-shadow:1px 1px 3px black;
+box-shadow:
+0 4px 12px rgba(0,0,0,.35);
