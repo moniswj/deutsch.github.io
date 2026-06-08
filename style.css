@@ -275,9 +275,7 @@ body{
 }
 .az-button{
     display:inline-block;
-
     margin:20px 0;
-
     padding:15px 40px;
 
     background:#0055cc;
@@ -287,11 +285,10 @@ body{
     text-decoration:none;
 
     font-size:24px;
-
     font-weight:bold;
 
     border-radius:15px;
-
+}
     transition:.3s;
 }
 
