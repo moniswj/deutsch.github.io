@@ -274,7 +274,6 @@ body{
     transform:scale(1.05);
 }
 .az-button{
-
     display:inline-block;
 
     margin:20px 0;
@@ -283,7 +282,7 @@ body{
 
     background:#0055cc;
 
-    color:white;
+    color:white !important;
 
     text-decoration:none;
 
