@@ -250,32 +250,32 @@ body{
 
 .bayern{
 
-    top:82%;
-    left:52%;
+    top:86%;
+    left:71%;
 }
 
 /* Berlin */
 
 .berlin{
 
-    top:410%;
-    left:23%;
+    top:43%;
+    left:82%;
 }
 
 /* Brandenburg */
 
 .brandenburg{
 
-    top:53%;
-    left:60%;
+    top:56%;
+    left:84%;
 }
 
 /* Sachsen */
 
 .sachsen{
 
-    top:63%;
-    left:56%;
+    top:64%;
+    left:72%;
 }
 
 /* Thüringen */
@@ -326,3 +326,5 @@ body{
 text-shadow:1px 1px 3px black;
 box-shadow:
 0 4px 12px rgba(0,0,0,.35);
+min-width:120px;
+text-align:center;
