@@ -300,3 +300,26 @@ body{
     object-fit:contain;
     display:block;
 }
+.land::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:6px;
+    height:100%;
+
+    border-radius:14px 0 0 14px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #000 33%,
+        #dd0000 33%,
+        #dd0000 66%,
+        #ffce00 66%
+    );
+}
