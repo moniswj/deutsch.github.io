@@ -305,3 +305,19 @@ body{
     color:white !important;
     border:3px solid black;
 }
+.word-list{
+    columns:3;
+    column-gap:40px;
+
+    margin-top:30px;
+
+    list-style:none;
+}
+
+.word-list li{
+    padding:6px 0;
+
+    font-size:18px;
+
+    color:#222;
+}
