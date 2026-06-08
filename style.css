@@ -225,3 +225,11 @@ body{
     text-decoration:none;
     color:#0055cc;
 }
+.map-container{
+    position:relative;
+
+    width:700px;
+    height:100vh;
+
+    margin:0 auto;
+}
