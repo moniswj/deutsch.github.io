@@ -182,11 +182,20 @@ body{
 }
 .land:hover{
 
-    background:rgba(255,215,0,0.9);
+    transform:scale(1.08);
 
-    color:black;
+    background:linear-gradient(
+        135deg,
+        rgba(0,0,0,0.7),
+        rgba(221,0,0,0.55),
+        rgba(255,206,0,0.55)
+    );
 
-    transform:scale(1.05);
+    color:white;
+
+    box-shadow:
+    0 0 15px rgba(255,206,0,0.4),
+    0 0 25px rgba(221,0,0,0.3);
 }
 
 /* Schleswig-Holstein */
