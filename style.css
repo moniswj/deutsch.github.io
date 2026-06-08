@@ -303,3 +303,8 @@ body{
 
     transform:scale(1.05);
 }
+.az-button{
+    background:red;
+    color:white !important;
+    border:3px solid black;
+}
