@@ -58,14 +58,13 @@ body{
     overflow:hidden;
     background:#111;
 }
+
 .germany-map{
     width:100%;
     height:100%;
     object-fit:contain;
     display:block;
 }
-
-
 
 .land{
     position:absolute;
@@ -116,6 +115,7 @@ body{
 .land:active{
     transform:scale(0.97);
 }
+
 .land::before{
     content:"";
 
@@ -138,6 +138,7 @@ body{
         gold 66%
     );
 }
+
 /* ===== POZYCJE LANDÓW ===== */
 
 .schleswig{
@@ -225,6 +226,7 @@ body{
     text-decoration:none;
     color:#0055cc;
 }
+
 .map-container{
     position:relative;
 
@@ -233,8 +235,8 @@ body{
 
     margin:0 auto;
 }
-.level-menu{
 
+.level-menu{
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
@@ -245,7 +247,6 @@ body{
 }
 
 .level-menu a{
-
     background:#0055cc;
 
     color:white;
@@ -266,16 +267,18 @@ body{
 }
 
 .level-menu a:hover{
-
     background:#ffce00;
 
     color:black;
 
     transform:scale(1.05);
 }
+
 .az-button{
     display:inline-block;
+
     margin:20px 0;
+
     padding:15px 40px;
 
     background:#0055cc;
@@ -285,26 +288,22 @@ body{
     text-decoration:none;
 
     font-size:24px;
+
     font-weight:bold;
 
     border-radius:15px;
-}
+
     transition:.3s;
 }
 
 .az-button:hover{
-
     background:#ffce00;
 
     color:black;
 
     transform:scale(1.05);
 }
-.az-button{
-    background:red;
-    color:white !important;
-    border:3px solid black;
-}
+
 .word-list{
     columns:3;
     column-gap:40px;
@@ -321,6 +320,7 @@ body{
 
     color:#222;
 }
+
 .wortschatz-bild{
     width:100%;
     max-width:1000px;
@@ -333,101 +333,7 @@ body{
 
     box-shadow:0 0 20px rgba(0,0,0,.2);
 }
-.lesson-page{
-    text-align:center;
-}
 
-.lesson-page h1{
-    font-size:42px;
-    margin-bottom:40px;
-}
-
-.lesson-text{
-    font-size:24px;
-    line-height:1.8;
-}
-
-.lesson-text ol{
-    display:inline-block;
-    text-align:left;
-    margin:25px 0;
-}
-
-.lesson-text h2{
-    margin-top:50px;
-    margin-bottom:30px;
-    font-size:34px;
-}
-
-.gruessen p{
-    font-size:30px;
-    font-weight:bold;
-    margin:15px 0;
-}
-
-.merke{
-    margin-top:50px;
-    font-size:30px;
-}
-/* ===== LEKCJA A1 ===== */
-
-.lesson-box{
-    max-width: 850px;
-    margin: 50px auto;
-    padding: 40px;
-
-    background: #fffdf7;   /* bardzo jasny beż */
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 6px 20px rgba(0,0,0,0.12);
-
-    text-align: center;
-
-    line-height: 1.8;
-}
-
-.lesson-box h1{
-    font-size: 34px;
-    color: #333;
-
-    margin-bottom: 25px;
-}
-
-.lesson-box h2{
-    font-size: 28px;
-    color: #444;
-
-    margin-top: 35px;
-    margin-bottom: 25px;
-}
-
-.lesson-box p{
-    font-size: 22px;
-    color: #444;
-
-    margin-bottom: 15px;
-}
-
-.lesson-box ul{
-    list-style: none;
-    padding: 0;
-}
-
-.lesson-box li{
-    font-size: 22px;
-    margin: 12px 0;
-}
-
-.lesson-box .important{
-    margin-top: 35px;
-
-    font-size: 24px;
-    font-weight: bold;
-
-    color: #b22222;
-}
 /* ===== LEKCJA A1 ===== */
 
 .a1-lesson{
@@ -480,7 +386,9 @@ body{
 }
 
 .gruessen p{
-    margin-bottom:16px;
+    font-size:30px;
+    font-weight:bold;
+    margin:15px 0;
 }
 
 .merke{
@@ -488,6 +396,7 @@ body{
 
     font-size:20px;
 }
+
 /* ===== TABELA POWITAŃ ===== */
 
 .gruss-tabelle{
