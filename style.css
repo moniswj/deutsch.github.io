@@ -448,22 +448,22 @@ body{
 }
 /* ===== OBRAZKI W LEKCJI A1 ===== */
 
+/* ===== OBRAZKI W LEKCJI A1 ===== */
+
 .gruss-bilder{
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
+    text-align:center;
 
     margin-top:40px;
-
-    flex-wrap:wrap;
 }
 
 .gruss-bilder img{
-    width:300px;
+    display:block;
 
-    max-width:100%;
+    width:100%;
+
+    max-width:500px;
+
+    margin:0 auto 30px auto;
 
     border-radius:15px;
 
@@ -473,5 +473,5 @@ body{
 }
 
 .gruss-bilder img:hover{
-    transform:scale(1.03);
+    transform:scale(1.02);
 }
