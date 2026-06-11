@@ -369,3 +369,62 @@ body{
     margin-top:50px;
     font-size:30px;
 }
+/* ===== LEKCJA A1 ===== */
+
+.lesson-box{
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 40px;
+
+    background: #fffdf7;   /* bardzo jasny beż */
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.12);
+
+    text-align: center;
+
+    line-height: 1.8;
+}
+
+.lesson-box h1{
+    font-size: 34px;
+    color: #333;
+
+    margin-bottom: 25px;
+}
+
+.lesson-box h2{
+    font-size: 28px;
+    color: #444;
+
+    margin-top: 35px;
+    margin-bottom: 25px;
+}
+
+.lesson-box p{
+    font-size: 22px;
+    color: #444;
+
+    margin-bottom: 15px;
+}
+
+.lesson-box ul{
+    list-style: none;
+    padding: 0;
+}
+
+.lesson-box li{
+    font-size: 22px;
+    margin: 12px 0;
+}
+
+.lesson-box .important{
+    margin-top: 35px;
+
+    font-size: 24px;
+    font-weight: bold;
+
+    color: #b22222;
+}
