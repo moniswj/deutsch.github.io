@@ -538,3 +538,18 @@ body{
     border-radius:15px;
     box-shadow:0 0 15px rgba(0,0,0,0.2);
 }
+.a1-center{
+    text-align:center;
+    line-height:1.8;
+    margin:30px 0;
+}
+
+.a1-center p{
+    margin:8px 0;
+}
+
+.a1-lesson h2{
+    text-align:center;
+    margin-top:50px;
+    margin-bottom:20px;
+}
