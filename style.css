@@ -446,3 +446,32 @@ body{
 .gruss-tabelle strong{
     color:#2f4f4f;
 }
+/* ===== OBRAZKI W LEKCJI A1 ===== */
+
+.gruss-bilder{
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+}
+
+.gruss-bilder img{
+    width:300px;
+
+    max-width:100%;
+
+    border-radius:15px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,0.15);
+
+    transition:.3s;
+}
+
+.gruss-bilder img:hover{
+    transform:scale(1.03);
+}
