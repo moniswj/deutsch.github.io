@@ -488,3 +488,52 @@ body{
 
     font-size:20px;
 }
+/* ===== TABELA POWITAŃ ===== */
+
+.gruss-tabelle{
+    width:100%;
+
+    margin-top:25px;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 6px 18px rgba(0,0,0,0.10);
+
+    font-size:17px;
+}
+
+.gruss-tabelle th{
+    background:#f3e8d4;
+
+    color:#333;
+
+    padding:16px;
+
+    text-align:left;
+
+    font-size:18px;
+}
+
+.gruss-tabelle td{
+    padding:15px;
+
+    border-bottom:1px solid #ececec;
+}
+
+.gruss-tabelle tr:nth-child(even){
+    background:#fffdf8;
+}
+
+.gruss-tabelle tr:hover{
+    background:#fff6df;
+}
+
+.gruss-tabelle strong{
+    color:#2f4f4f;
+}
