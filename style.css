@@ -612,3 +612,13 @@ body{
 .zahlen-spalte p {
     margin: 8px 0;
 }
+.zahlen-tabelle {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.zahlen-tabelle td {
+    width: 50%;
+    vertical-align: top;
+    padding-right: 40px;
+}
