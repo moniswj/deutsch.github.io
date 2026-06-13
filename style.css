@@ -574,3 +574,12 @@ body{
     margin:30px auto;
     border-radius:10px;
 }
+.zahlen-liste {
+    columns: 2;
+    column-gap: 40px;
+}
+
+.zahlen-liste li {
+    margin-bottom: 8px;
+    break-inside: avoid;
+}
