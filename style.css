@@ -598,3 +598,17 @@ body{
     margin-bottom: 8px;
     break-inside: avoid;
 }
+.zahlen-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px;
+    margin-top: 20px;
+}
+
+.zahlen-spalte {
+    width: 48%;
+}
+
+.zahlen-spalte p {
+    margin: 8px 0;
+}
